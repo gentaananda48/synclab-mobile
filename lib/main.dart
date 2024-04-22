@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Pages/Auth/login.dart';
-import 'Pages/Auth/register.dart';
-import 'Pages/dashboard.dart';
+import 'routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,11 +24,7 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.blueAccent, // Warna splash
       ),
       // Definisi rute aplikasi
-      routes: {
-        '/': (context) => DashboardPage(),
-        '/login': (context) => LoginPage(),
-        '/register': (context) => RegisterPage(),
-      },
+      routes: appRoutes,
       initialRoute: '/login',
     );
   }
