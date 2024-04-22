@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../Dashboard.dart'; // Import halaman home
-import 'register.dart'; // Import halaman register
+import 'Register.dart'; // Import halaman register
 
 class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
