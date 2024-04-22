@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../home.dart'; // Import halaman home
+import '../dashboard.dart'; // Import halaman home
 import 'register.dart'; // Import halaman register
 
 class LoginPage extends StatelessWidget {
@@ -42,7 +42,7 @@ class LoginPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          HomePage()), // Navigate to home page
+                          DashboardPage()), // Navigate to home page
                 );
               },
               child: Text('Login'),
@@ -57,7 +57,7 @@ class LoginPage extends StatelessWidget {
                 );
               },
               child: Text(
-                'Register',
+                'New Here? Register',
                 style: TextStyle(
                   color: Colors.blue,
                   decoration: TextDecoration.underline,
