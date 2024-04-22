@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'MainDrawer.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
@@ -24,64 +25,7 @@ class _DashboardPageState extends State<DashboardPage> {
           },
         ),
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Drawer'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            ),
-            ListTile(
-              title: Text('Menu 1'),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text('Menu 2'),
-              onTap: () {},
-            ),
-            Divider(),
-            ListTile(
-              title: Text('Logout'),
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      title: Text('Konfirmasi Logout'),
-                      content: Text('Apakah anda yakin ingin keluar?'),
-                      backgroundColor: Colors.white,
-                      actions: <Widget>[
-                        TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: Text(
-                            'Batal',
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {
-                            Navigator.of(context)
-                                .pushReplacementNamed('/login');
-                          },
-                          child: Text(
-                            'Logout',
-                            style: TextStyle(color: Colors.red),
-                          ),
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: MainDrawer(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

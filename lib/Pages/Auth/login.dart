@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../dashboard.dart'; // Import halaman home
+import '../Dashboard.dart'; // Import halaman home
 import 'register.dart'; // Import halaman register
 
 class LoginPage extends StatelessWidget {

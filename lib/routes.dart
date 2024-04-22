@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'Pages/Auth/login.dart';
-import 'Pages/Auth/register.dart';
-import 'Pages/dashboard.dart';
+import 'Pages/Auth/Login.dart';
+import 'Pages/Auth/Register.dart';
+import 'Pages/Dashboard.dart';
 
 // Definisikan rute aplikasi
 Map<String, WidgetBuilder> appRoutes = {
