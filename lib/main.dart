@@ -10,7 +10,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'SyncLab',
-      theme: ThemeData.light().copyWith(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        textTheme: TextTheme(
+          bodyText2: TextStyle(
+            fontFamily: 'CreatoDisplay',
+            fontSize: 16.0,
+            fontWeight: FontWeight.normal,
+            fontStyle: FontStyle.normal,
+          ),
+        ),
         // Tema Terang
         primaryColor: Colors.blue,
         colorScheme: ColorScheme.fromSwatch(

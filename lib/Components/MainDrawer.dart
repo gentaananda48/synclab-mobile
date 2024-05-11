@@ -21,20 +21,30 @@ class _MainDrawerState extends State<MainDrawer> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
-            child: Text('Drawer'),
-            decoration: BoxDecoration(
-              color: Colors.blue,
+          GestureDetector(
+            onTap: () {
+              // TODO: fix Profile page
+              // Navigator.pushNamed(context, '/profile');
+            },
+            child: UserAccountsDrawerHeader(
+              // Masih Static
+              accountName: Text("Genta Ananda R"),
+              accountEmail: Text("gentaanandarakhsy@student.unsia.ac.id"),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage("assets/self.jpeg"),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
             ),
           ),
           ListTile(
-            title: Text('Menu 1'),
-            onTap: () {},
+            title: Text('Settings'),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed('/');
+            },
           ),
-          ListTile(
-            title: Text('Menu 2'),
-            onTap: () {},
-          ),
+          // TODO: Add feature darkmode
           // Divider(),
           // SwitchListTile(
           //   title: Text('Dark Mode'),
@@ -60,8 +70,10 @@ class _MainDrawerState extends State<MainDrawer> {
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    title: Text('Konfirmasi Logout'),
-                    content: Text('Apakah anda yakin ingin keluar?'),
+                    title: Text('Konfirmasi Logout',
+                        style: TextStyle(color: Colors.black)),
+                    content: Text('Apakah anda yakin ingin keluar?',
+                        style: TextStyle(color: Colors.black)),
                     backgroundColor: Colors.white,
                     actions: <Widget>[
                       TextButton(

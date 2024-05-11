@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Dashboard.dart'; // Import halaman home
+import '../Home.dart'; // Import halaman home
 import 'Register.dart'; // Import halaman register
 
 class LoginPage extends StatelessWidget {
@@ -10,7 +10,10 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: Text(
+          'Login',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -42,7 +45,7 @@ class LoginPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          DashboardPage()), // Navigate to home page
+                          HomePage()), // Navigate to home page
                 );
               },
               child: Text('Login'),
@@ -60,7 +63,6 @@ class LoginPage extends StatelessWidget {
                 'New Here? Register',
                 style: TextStyle(
                   color: Colors.blue,
-                  decoration: TextDecoration.underline,
                 ),
               ),
             ),

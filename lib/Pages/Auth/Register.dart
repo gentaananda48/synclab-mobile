@@ -17,7 +17,10 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Register'),
+        title: Text(
+          'Register',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -66,7 +69,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   'Already have an account? Login here',
                   style: TextStyle(
                     color: Colors.blue,
-                    decoration: TextDecoration.underline,
                   ),
                 ),
               ),
